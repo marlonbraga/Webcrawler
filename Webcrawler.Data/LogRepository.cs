@@ -13,7 +13,7 @@ namespace Webcrawler.Data
 
         private async Task SaveToJson(List<ProxyData> dataList)
         {
-            string jsonFilePath = $"output_{DateTime.UtcNow.Ticks}.json";
+            string jsonFilePath = $"../../../../CapturedData/output_{DateTime.UtcNow.Ticks}.json";
             await File.WriteAllTextAsync(jsonFilePath, JsonSerializer.Serialize(dataList));
         }
 
